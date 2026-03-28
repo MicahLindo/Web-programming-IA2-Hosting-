@@ -1,0 +1,149 @@
+<!--
+Name:Micah Lindo
+ID#:2505275
+Course:Web Programming
+Course Code:CIT2011
+Tutor's name:Sirisha Badhika
+Date:27/03/26
+Assignment:Individual Assignment 2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bright Techsoulton - Products</title>
+  <!-- External stylesheet for consistent styling -->
+  <link rel="stylesheet" href="../Style/style.css">
+</head>
+<body>
+  <!-- ================= Navigation Bar ================= -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Company logo -->
+      <img src="../Assets/logo 1.jpg" alt="Bright Techsoulton Logo" class="logo-img">
+    </div>
+    <div class="nav-right">
+      <!-- Navigation links -->
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="cart.html">Cart</a>
+
+      <!-- Login/Register links (shown when user is not logged in) -->
+      <a href="login.html" id="loginLink">Login</a>
+      <a href="register.html" id="registerLink">Register</a>
+
+      <!-- Sign Out button (shown when user is logged in) -->
+      <button id="signoutBtn" class="btn primary" type="button" onclick="signOut()">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- ================= Products Section ================= -->
+  <section class="products">
+    <h1>Our Products</h1>
+    <p class="subtitle">Explore our collection of premium tech devices and accessories</p>
+
+    <!-- Category Filter Buttons -->
+    <div class="category-filter">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Laptops</button>
+      <button class="filter-btn">Smartphones</button>
+      <button class="filter-btn">Audio</button>
+      <button class="filter-btn">Wearables</button>
+      <button class="filter-btn">Tablets</button>
+      <button class="filter-btn">Accessories</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+      <!-- Product card: Laptop -->
+      <div class="card" data-category="laptops">
+        <img src="../Assets/image 1.jpg" alt="MSI Katana 15">
+        <h3>MSI Katana 15</h3>
+        <p>144Hz Display Badge</p>
+        <p>360Hz refresh rate</p>
+        <p>Dragon Emblem with Neon Graphics</p>
+        <p class="price">$202,798.44</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Product card: Smartphone -->
+      <div class="card" data-category="smartphones">
+        <img src="../Assets/image 2.jpg" alt="Samsung Galaxy S24 Ultra">
+        <h3>Samsung Galaxy S24 Ultra</h3>
+        <p>162.3 x 79 x 8.6 mm (6.39 x 3.11 x 0.34 in)</p>
+        <p>256GB 12GB RAM</p>
+        <p class="price">$184,500.00</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Product card: Audio -->
+      <div class="card" data-category="audio">
+        <img src="../Assets/image 3.jpg" alt="Onn Over-Ear Wireless ANC Headphones">
+        <h3>Onn Over-Ear Wireless ANC Headphones</h3>
+        <p>Premium noise-canceling headphones with 90 hrs battery life, studio-quality sound, and comfortable design.</p>
+        <p class="price">$4,500.00</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Product card: Tablet -->
+      <div class="card" data-category="tablets">
+        <img src="../Assets/image 4.jpg" alt="Samsung Galaxy Tab S9 Ultra">
+        <h3>Samsung Galaxy Tab S9 Ultra</h3>
+        <p>IP68 dust tight and water resistant (immersible up to 1.5m for 30 min)</p>
+        <p>Storage/RAM: 256GB 12GB RAM</p>
+        <p class="price">$156,000.00</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Product card: Accessory -->
+      <div class="card" data-category="accessories">
+        <img src="../Assets/image 5.jpg" alt="Gaming Keyboard RGB">
+        <h3>Gaming Keyboard RGB</h3>
+        <p>Mechanical gaming keyboard with customizable RGB lighting, programmable keys, and durable switches.</p>
+        <p class="price">$7,000.00</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Product card: Wearable -->
+      <div class="card" data-category="wearables">
+        <img src="../Assets/image 6.jpg" alt="Amazfit Smart Watch">
+        <h3>Amazfit Smart Watch</h3>
+        <p>Round face with active digital display</p>
+        <p>Black leather strap</p>
+        <p>GPS, heart rate, sleep monitor, 10-day battery</p>
+        <p class="price">$6,000.00</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Product card: Accessory (Smart Bulbs) -->
+      <div class="card" data-category="accessories">
+        <img src="../Assets/image 7.jpg" alt="Linkind Smart Light Bulbs">
+        <h3>Linkind Smart Light Bulbs (4 Pack)</h3>
+        <p>Width: 4.6 inches</p>
+        <p>Depth: 4.6 inches</p>
+        <p>Length: 4.7 inches</p>
+        <p class="price">$4,678.44</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Product card: Accessory (Echo Dot) -->
+      <div class="card" data-category="accessories">
+        <img src="../Assets/image 8.jpg" alt="Amazon Echo Dot">
+        <h3>Amazon Echo Dot (Newest Model)</h3>
+        <p>Alexa is happy to help – Ask Alexa for weather updates, set timers, get answers, and hear jokes.</p>
+        <p>Control smart home devices with voice and routines triggered by sensors.</p>
+        <p>Play music, audiobooks, and podcasts from Amazon Music, Apple Music, Spotify, and more.</p>
+        <p class="price">$6,238.44</p>
+        <button class="cart-btn">🛒 Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Scripts ================= -->
+  <!-- Product page logic (filters, add to cart, sign out) -->
+  <script src="../Style/product.js"></script>
+  <!-- Cart logic (shared cart functions) -->
+  <script src="../Style/cart.js"></script>
+</body>
+</html>

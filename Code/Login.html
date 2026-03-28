@@ -1,0 +1,70 @@
+<!--
+Name:Micah Lindo
+ID#:2505275
+Course:Web Programming
+Course Code:CIT2011
+Tutor's name:Sirisha Badhika
+Date:27/03/26
+Assignment:Individual Assignment 2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bright Techsoulton - Login</title>
+  <!-- External stylesheet for consistent styling across pages -->
+  <link rel="stylesheet" href="../Style/style.css">
+</head>
+<body>
+  <!-- ================= Navigation Bar ================= -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Company logo -->
+      <img src="../Assets/logo 1.jpg" alt="Bright Techsoulton Logo" class="logo-img">
+    </div>
+    <div class="nav-right">
+      <!-- Navigation links -->
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <!-- Active page link (Login) -->
+      <a href="login.html" class="active">Login</a>
+      <!-- Register button -->
+      <a href="register.html" class="register-btn">Register</a>
+    </div>
+  </nav>
+
+  <!-- ================= Login Form Section ================= -->
+  <div class="container login-container">
+    <!-- Page heading -->
+    <h1>Login</h1>
+    <!-- Instructions for the user -->
+    <p class="instructions">Enter your credentials to access your account</p>
+
+    <!-- Login form -->
+    <form id="loginForm">
+      <!-- Username input -->
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <!-- Password input -->
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <!-- Submit button -->
+      <button type="submit" class="black-btn">Login</button>
+    </form>
+
+    <!-- Link to registration page -->
+    <p class="register-link">
+      Don’t have an account? <a href="register.html">Register here</a>
+    </p>
+
+    <!-- Message area for login feedback (success/error) -->
+    <p id="message"></p>
+  </div>
+
+  <!-- ================= Script ================= -->
+  <!-- External JS file containing login logic -->
+  <script src="../Style/login.js"></script>
+</body>
+</html>

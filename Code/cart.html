@@ -1,0 +1,62 @@
+<!--
+Name:Micah Lindo
+ID#:2505275
+Course:Web Programming
+Course Code:CIT2011
+Tutor's name:Sirisha Badhika
+Date:27/03/26
+Assignment:Individual Assignment 2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bright Techsoulton - Cart</title>
+  <!-- External stylesheet for consistent styling across pages -->
+  <link rel="stylesheet" href="../Style/style.css">
+</head>
+<body class="cart-page">
+  <!-- ================= Navigation Bar ================= -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Company logo -->
+      <img src="../Assets/logo 1.jpg" alt="Bright Techsoulton Logo" class="logo-img">
+    </div>
+    <div class="nav-right">
+      <!-- Navigation links -->
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <!-- Sign Out button (shown when user is logged in) -->
+      <button id="signoutBtn" class="btn primary" type="button" onclick="signOut()">Sign Out</button>
+    </div>
+  </nav>
+
+  <!-- ================= Cart Section ================= -->
+  <h1>Your Cart</h1>
+  
+  <!-- Cart table showing items -->
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody></tbody> <!-- Rows will be dynamically filled/injected by cart.js -->
+  </table>
+
+  <!-- Summary of totals (subtotal, discount, tax, total) -->
+  <p id="summary"></p>
+
+  <!-- Cart action buttons -->
+  <button onclick="clearCart()">Clear All</button>
+  <button onclick="checkout()">Checkout</button>
+
+  <!-- ================= Script ================= -->
+  <!-- External JS file containing cart logic (rendering, sign out, etc.) -->
+  <script src="../Style/cart.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!--
+Name:Micah Lindo
+ID#:2505275
+Course:Web Programming
+Course Code:CIT2011
+Tutor's name:Sirisha Badhika
+Date:27/03/26
+Assignment:Individual Assignment 2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Ensures proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Techsoulton - Register</title>
+  <!-- External stylesheet for consistent styling -->
+  <link rel="stylesheet" href="../Style/style.css">
+</head>
+<body>
+  <!-- ================= Navigation Bar ================= -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Company logo -->
+      <img src="../Assets/logo 1.jpg" alt="Bright Techsoulton Logo" class="logo-img">
+    </div>
+    <div class="nav-right">
+      <!-- Navigation links -->
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="login.html">Login</a>
+      <!-- Register link styled as a button -->
+      <a href="register.html" class="register-btn">Register</a>
+    </div>
+  </nav>
+
+  <!-- ================= Registration Form Section ================= -->
+  <div class="register-container">
+    <!-- Page heading -->
+    <h1>Create Your Account</h1>
+
+    <!-- Registration form -->
+    <form id="registerForm">
+      <!-- Full name input -->
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <!-- Date of birth input -->
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <!-- Email input -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Username input -->
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <!-- Password input -->
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <!-- Submit button -->
+      <button type="submit">Register</button>
+    </form>
+
+    <!-- Message area for feedback (success/error) -->
+    <p id="message"></p>
+  </div>
+
+  <!-- ================= Script ================= -->
+  <!-- External JS file containing registration logic -->
+  <script src="../Style/register.js"></script>
+</body>
+</html>
